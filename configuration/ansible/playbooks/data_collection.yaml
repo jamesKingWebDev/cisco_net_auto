@@ -1,0 +1,5 @@
+- name: Data collection 
+  hosts: cisco_device
+  tasks:
+    - name: Gather facts
+      ios_facts:

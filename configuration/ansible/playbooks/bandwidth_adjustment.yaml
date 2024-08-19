@@ -1,0 +1,8 @@
+- name: Bandwidth Adjustment
+  hosts: cisco_device
+  tasks:
+    - name: Applying interface configuration
+      ios_config:
+        lines:
+          - interface GigabitEthernet0/1
+          - bandwidth 100000

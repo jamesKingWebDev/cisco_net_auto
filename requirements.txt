@@ -1,0 +1,7 @@
+ansible
+paramiko
+jinja2
+scikit-learn
+pandas
+prometheus_client
+pytest
