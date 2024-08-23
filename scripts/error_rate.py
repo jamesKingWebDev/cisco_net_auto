@@ -13,4 +13,3 @@ def error_rate_calculation(log_path):
 
 if __name__ == "__main__":
     error_count = error_rate_calculation('../logs/error.log')
-```

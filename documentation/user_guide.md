@@ -33,8 +33,8 @@ The Network Slicing Automation Framework is designed to automate the configurati
 ### Installation Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/cisco-network-slicing-automation.git
-   cd cisco-network-slicing-automation
+   git clone https://github.com/jamesKingWebDev/cisco_net_auto.git
+   cd cisco_net_auto
    ```
 
 2. **Install Python Dependencies**:
@@ -52,7 +52,7 @@ The Network Slicing Automation Framework is designed to automate the configurati
 ## Configuration
 
 ### Ansible Inventory
-The Ansible inventory file located at `config/ansible/inventory.yaml` defines the network devices that will be managed by the framework. Customize this file with the details of your Cisco devices.
+The Ansible inventory file located at `configuration/ansible/inv.yaml` defines the network devices that will be managed by the framework. Customize this file with the details of your Cisco devices.
 
 ```yaml
 all:
@@ -70,9 +70,9 @@ all:
 - **ansible_network_os**: Specifies the network operating system, which is `ios` for Cisco devices.
 
 ### Cisco Interface Templates
-The framework uses Jinja2 templates to generate configurations for Cisco interfaces. These templates are located in the `config/cisco/` directory.
+The framework uses Jinja2 templates to generate configurations for Cisco interfaces. These templates are located in the `configuration/cisco/` directory.
 
-For example, the `interface_template.j2` file might look like this:
+For example, the `template_interface.j2` file might look like this:
 
 ```jinja2
 interface {{ interface_name }}
@@ -128,11 +128,11 @@ python scripts/decision_engine.py
 Sometimes, you might need to execute specific commands on your network devices directly.
 
 ### Running Commands
-Use the `execute_commands.py` script to run commands on Cisco devices.
+Use the `command_execution.py` script to run commands on Cisco devices.
 
 Example:
 ```bash
-python scripts/execute_commands.py
+python scripts/command_execution.py
 ```
 
 This script can execute any Cisco IOS command and return the output.
@@ -162,7 +162,7 @@ Ensure to monitor these logs regularly to keep track of the system’s health an
 The framework includes unit tests to verify the correctness of its components.
 
 ### Running Tests
-Tests are located in the `tests/` directory and can be run using the `pytest` framework.
+Tests are located in the `samples/` directory and can be run using the `pytest` framework.
 
 To run all tests:
 ```bash
@@ -194,7 +194,3 @@ If you encounter issues while using the framework, refer to the logs in the `log
 - **Command Execution Failures**: Double-check the commands being executed and the device's capability to run those commands.
 
 If issues persist, consider consulting the relevant Cisco documentation or seeking help from the community.
-
----
-
-This `user_guide.md` provides a comprehensive walkthrough of how to use the framework. Each section is designed to guide you through the essential tasks needed to operate and maintain the network slicing automation framework effectively.

@@ -12,7 +12,7 @@ Using this framework on Cisco's DevNet Sandbox involves setting up the environme
 
 ### 3. **Configure the Framework for DevNet Sandbox**
    - **Modify Inventory File**:
-     Update the `config/ansible/inventory.yaml` with the IP addresses and credentials provided by DevNet. Example:
+     Update the `configuration/ansible/inv.yaml` with the IP addresses and credentials provided by DevNet. Example:
      ```yaml
      all:
        hosts:
@@ -23,7 +23,7 @@ Using this framework on Cisco's DevNet Sandbox involves setting up the environme
            ansible_network_os: ios
      ```
 
-   - **Adjust Playbooks**: Ensure the playbooks in `config/ansible/playbooks/` are targeting the correct interfaces and commands appropriate for the devices in the sandbox.
+   - **Adjust Playbooks**: Ensure the playbooks in `configuration/ansible/playbooks/` are targeting the correct interfaces and commands appropriate for the devices in the sandbox.
 
 ### 4. **Collect Data from DevNet Devices**
    - **Run the Data Collection Script**: Use the `scripts/data_collection.py` script to collect interface and KPI data from the sandbox devices. This will save the output locally.
@@ -42,7 +42,7 @@ Using this framework on Cisco's DevNet Sandbox involves setting up the environme
 
 ### 6. **Run the Decision Engine**
    - **Make Adjustments Based on Data**: The decision engine will use the collected data to make real-time decisions and adjust network slices.
-   - **Execute Commands**: The `scripts/execute_commands.py` script will apply the required changes to the network devices in the sandbox.
+   - **Execute Commands**: The `scripts/command_execution.py` script will apply the required changes to the network devices in the sandbox.
    - **Example Command**:
      ```bash
      python scripts/decision_engine.py
@@ -60,7 +60,7 @@ Using this framework on Cisco's DevNet Sandbox involves setting up the environme
    - **Run Unit Tests**: Ensure that your framework is functioning correctly by running the unit tests in the `tests/` directory.
    - **Example Command**:
      ```bash
-     pytest tests/
+     pytest samples/
      ```
 
 ### 9. **Integrate with CI/CD Pipeline (Optional)**

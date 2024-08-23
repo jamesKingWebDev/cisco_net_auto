@@ -1,4 +1,4 @@
-To set up network devices on Cisco DevNet Sandbox and test this framework, follow these steps:
+To set up network devices on Cisco DevNet Sandbox and test this framework, follow these steps diligently:
 
 ### 1. **Access Cisco DevNet Sandbox**
 
@@ -21,7 +21,7 @@ To set up network devices on Cisco DevNet Sandbox and test this framework, follo
 ### 2. **Configure Ansible for Cisco DevNet Sandbox**
 
 1. **Update Inventory:**
-   - Modify your `inventory.yaml` file in `config/ansible/` with the provided sandbox credentials.
+   - Modify your `inv.yaml` file in `configuration/ansible/` with the provided sandbox credentials.
    ```yaml
    all:
      hosts:
@@ -37,15 +37,15 @@ To set up network devices on Cisco DevNet Sandbox and test this framework, follo
      ```sh
      pip install ansible
      ```
-   - Test the `adjust_bandwidth.yaml` and `collect_data.yaml` playbooks by running:
+   - Test the `bandwidth_adjustment.yaml` and `data_collection.yaml` playbooks by running:
      ```sh
-     ansible-playbook -i config/ansible/inventory.yaml config/ansible/playbooks/collect_data.yaml
+     ansible-playbook -i configuration/ansible/inv.yaml configuration/ansible/playbooks/data_collection.yaml
      ```
 
 ### 3. **Update and Test Python Scripts**
 
 1. **Update Scripts with Sandbox Credentials:**
-   - Update any hardcoded credentials or IP addresses in your Python scripts (e.g., `data_collection.py`, `execute_commands.py`).
+   - Update any hardcoded credentials or IP addresses in your Python scripts (e.g., `data_collection.py`, `command_execution.py`).
    ```python
    if __name__ == "__main__":
        collect_data('<SANDBOX_IP>', '<USERNAME>', '<PASSWORD>')
@@ -59,7 +59,7 @@ To set up network devices on Cisco DevNet Sandbox and test this framework, follo
    - Test individual scripts. For example:
      ```sh
      python scripts/data_collection.py
-     python scripts/execute_commands.py
+     python scripts/command_execution.py
      ```
 
 ### 4. **Verify Model and Monitoring**
@@ -85,4 +85,4 @@ To set up network devices on Cisco DevNet Sandbox and test this framework, follo
 2. **Debug Issues:**
    - If you encounter errors, verify the sandbox configuration, check network connectivity, and ensure that all dependencies are correctly installed and configured.
 
-By following these steps, you can effectively set up network devices on Cisco DevNet Sandbox and test this Python-based automation framework.
+By following these steps, you can effectively set up network devices on Cisco DevNet Sandbox and test this Python-based automation framework

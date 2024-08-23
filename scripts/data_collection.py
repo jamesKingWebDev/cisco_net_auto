@@ -4,7 +4,7 @@ import os
 def collect_data(host, username, password):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(host, username=developer, password=C1sco12345)
+    client.connect(host, username, password)
 
     stdin, stdout, stderr = client.exec_command('show interfaces')
     data = stdout.read().decode()

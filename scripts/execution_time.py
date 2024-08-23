@@ -14,4 +14,4 @@ def playbook_execution_time(playbook_path):
     return execution_time
 
 if __name__ == "__main__":
-    execution_time = playbook_execution_time('../config/ansible/playbooks/bandwidth_adjudtment.yaml')
+    execution_time = playbook_execution_time('../configuration/ansible/playbooks/bandwidth_adjudtment.yaml')

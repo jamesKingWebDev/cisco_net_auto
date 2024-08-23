@@ -11,7 +11,7 @@
     ```
     pip install -r requirements.txt
     ```
-3. Set up your Cisco devices in the `config/ansible/inventory.yaml` file.
+3. Set up your Cisco devices in the `configuration/ansible/inv.yaml` file.
 
 ## Running the Scripts
 - To collect data:
